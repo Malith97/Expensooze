@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ViewBill">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="5sp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:onClick="backToHome"
+            android:textColor="@color/white"
+            android:src="@drawable/ic_arrow"
+            android:layout_gravity="start"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Expenses"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:layout_marginLeft="25sp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_add"
+            android:padding="10dp"
+            android:layout_marginRight="10sp"
+            android:onClick="toToaddExpenses"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="end"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageButton
+                android:id="@+id/lastMonth"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:onClick="backToHome"
+                android:textColor="@color/white"
+                android:src="@drawable/ic_arrow"
+                android:layout_gravity="start"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/white"
+                android:text="March"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/nextMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_arrow_forward"
+                android:padding="10dp"
+                android:layout_marginRight="10sp"
+                android:onClick="toToaddExpenses"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scroll_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar2"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/MatchImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/electricityicon"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="20sp">
+
+                        <TextView
+                            android:id="@+id/MatchName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:paddingTop="21dp"
+                            android:paddingLeft="100sp"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/white"
+                            android:text="Electricity Bill"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:textSize="18dp"
+                                android:paddingLeft="100sp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Rs."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:paddingLeft="4sp"
+                                android:textSize="18dp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="3800"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/waterdrop"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="20sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:paddingTop="21dp"
+                            android:paddingLeft="100sp"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/white"
+                            android:text="Water Bill"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:textSize="18dp"
+                                android:paddingLeft="100sp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Rs."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:paddingLeft="4sp"
+                                android:textSize="18dp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="480"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/telephone"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="20sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:paddingTop="21dp"
+                            android:paddingLeft="100sp"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/white"
+                            android:text="Telephone Bill"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:textSize="18dp"
+                                android:paddingLeft="100sp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Rs."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:paddingLeft="4sp"
+                                android:textSize="18dp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="900"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/othericon"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="20sp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:paddingTop="21dp"
+                            android:paddingLeft="100sp"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/white"
+                            android:text="Other Bills"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:textSize="18dp"
+                                android:paddingLeft="100sp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Rs."/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10sp"
+                                android:paddingLeft="4sp"
+                                android:textSize="18dp"
+                                android:textColor="#F4F6F6"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="8900"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

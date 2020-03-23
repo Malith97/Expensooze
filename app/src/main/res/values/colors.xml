@@ -10,4 +10,7 @@
     <color name="water">#03A9F4</color>
     <color name="telephone">#4CAF50</color>
     <color name="other">#F44336</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>

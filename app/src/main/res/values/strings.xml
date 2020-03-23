@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Expensooze</string>
+
+    <string name="addBill_prompt">Choose Bill Type</string>
+
+    <string-array name="addbill_drop">
+        <item>Electricity</item>
+        <item>Water</item>
+        <item>Telephone</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string name="addMonth_prompt">Choose Month</string>
+    <string-array name="month_drop">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+    </string-array>
+
 </resources>

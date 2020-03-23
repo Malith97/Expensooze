@@ -2,8 +2,10 @@ package com.synnlabz.expensooze;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,5 +33,21 @@ public class MainActivity extends AppCompatActivity {
         //pieChartData.setHasLabels(true).setValueLabelTextSize(14);
         pieChartData.setHasCenterCircle(true).setCenterText1("MARCH").setCenterText1FontSize(15).setCenterText1Color(Color.parseColor("#212A51"));
         pieChartView.setPieChartData(pieChartData);
+    }
+
+    public void goToAddBill(View view) {
+        startActivity(new Intent(MainActivity.this,AddBill.class));
+    }
+
+    public void goToViewBill(View view) {
+        startActivity(new Intent(MainActivity.this,ViewBill.class));
+    }
+
+    public void goToReports(View view) {
+        startActivity(new Intent(MainActivity.this,Reports .class));
+    }
+
+    public void goToAddCategory(View view) {
+        startActivity(new Intent(MainActivity.this,AddCategory .class));
     }
 }
