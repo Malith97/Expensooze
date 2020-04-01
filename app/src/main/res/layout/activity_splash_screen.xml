@@ -37,6 +37,25 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textStyle="bold"
+            android:text="By Synn Labz"
+            android:textColor="#C3C3C3"/>
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>

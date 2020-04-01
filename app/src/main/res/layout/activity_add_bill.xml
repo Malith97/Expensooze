@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/white"
     tools:context=".AddBill">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:layout_margin="5sp">
 
         <ImageButton
@@ -28,24 +28,12 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Add Expenses"
+            android:text="Add Bill"
             android:textSize="20sp"
             android:fontFamily="@font/roboto_regular"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginLeft="25sp"/>
 
-        <ImageButton
-            android:id="@+id/saveBill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:src="@drawable/ic_done"
-            android:padding="10dp"
-            android:layout_marginRight="10sp"
-            android:onClick="backToHome"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="end"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -59,50 +47,26 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/white"
                 android:orientation="horizontal"
-                android:padding="20sp"
-                android:weightSum="4">
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:padding="10sp"
+                android:weightSum="1">
 
-                <LinearLayout
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/addBill"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="vertical">
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/addBill"
-                        android:layout_width="wrap_content"
-                        android:layout_height="45dp"
-                        android:entries="@array/addbill_drop"
-                        android:theme="@style/mySpinnerItemStyle"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/transparent"
-                        android:src="@drawable/ic_add"
-                        android:padding="10dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:layout_gravity="end"/>
-
-                </LinearLayout>
+                    android:layout_height="45dp"
+                    android:theme="@style/mySpinnerItemStyle"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"/>
 
 
             </LinearLayout>
@@ -110,52 +74,87 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
-                android:orientation="horizontal"
-                android:padding="20sp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Enter Title Here">
+                    <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="bottom">
-
-                        <EditText
-                            android:id="@+id/email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/transparent"
-                            android:hint="Add Title Here"
-                            android:drawableRight="@drawable/ic_title"
-                            android:fontFamily="@font/roboto_regular"
-                            android:paddingRight="15dp"
-                            android:textColor="@color/white"
-                            android:textSize="15sp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@color/colorAccent"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Bill Date"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:minHeight="50dp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20sp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:hint="Enter Date">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editDate"
+                        android:fontFamily="@font/roboto_regular"
+                        android:drawableRight="@drawable/ic_title"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:minHeight="50dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Title Here">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Bill Amount"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:minHeight="50dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="horizontal"
-                android:padding="20sp">
+                android:padding="5dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -174,8 +173,8 @@
                         android:text="Rs."
                         android:layout_marginTop="15dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/white"
-                        android:textCursorDrawable="@color/white" />
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@color/black" />
 
                 </LinearLayout>
 
@@ -183,6 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -195,10 +195,11 @@
                             android:layout_height="wrap_content"
                             android:background="@color/transparent"
                             android:hint="Add Amount Here"
+                            android:id="@+id/editAmount"
                             android:drawableRight="@drawable/ic_money"
                             android:fontFamily="@font/roboto_regular"
                             android:paddingRight="15dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="15sp" />
 
                         <View
@@ -217,25 +218,67 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Remark"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:minHeight="50dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20sp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:hint="Enter Your Remark Here">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:id="@+id/editRemark"
+                        android:drawableRight="@drawable/ic_title"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:minHeight="50dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="horizontal"
                 android:padding="20sp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <Button
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:orientation="vertical">
-
-                    <Spinner
-                        android:id="@+id/addMonth"
-                        android:layout_width="wrap_content"
-                        android:layout_height="45dp"
-                        android:entries="@array/month_drop"
-                        android:theme="@style/mySpinnerItemStyle"
-                        android:textColor="@color/white"/>
-
-                </LinearLayout>
+                    android:text="save"
+                    android:onClick="AddRec"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/roboto_regular"/>
 
 
             </LinearLayout>

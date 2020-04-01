@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -81,176 +81,15 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:gravity="start"
+                                    android:gravity="center"
                                     android:orientation="horizontal">
 
                                     <lecho.lib.hellocharts.view.PieChartView
                                         android:id="@+id/chart"
-                                        android:layout_width="150dp"
-                                        android:layout_height="150dp" />
-
-                                    <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center"
-                                        android:layout_marginTop="20dp"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Total"
-                                            android:fontFamily="@font/roboto_regular"
-                                            android:textStyle="bold"
-                                            android:textSize="40dp"/>
-
-                                        <LinearLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content">
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:text="Rs."
-                                                android:fontFamily="@font/roboto_regular"
-                                                android:textStyle="bold"
-                                                android:textSize="30dp"/>
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:text="21500"
-                                                android:fontFamily="@font/roboto_regular"
-                                                android:textStyle="bold"
-                                                android:textSize="30dp"/>
-
-                                        </LinearLayout>
-
-
-                                    </LinearLayout>
-
-
+                                        android:layout_height="200dp" />
                                 </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal"
-                                        android:layout_weight="1">
-
-                                        <de.hdodenhof.circleimageview.CircleImageView
-                                            android:id="@+id/img_on"
-                                            android:layout_width="15dp"
-                                            android:layout_height="15dp"
-                                            app:civ_border_width="10dp"
-                                            android:layout_marginTop="3dp"
-                                            android:src="@drawable/default_user"
-                                            app:civ_border_color="#FFD54F"/>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Electricity Bill"
-                                            android:fontFamily="@font/roboto_regular"
-                                            android:textSize="15dp"
-                                            android:textColor="@color/colorPrimaryDark"
-                                            android:layout_marginLeft="10dp"/>
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal"
-                                        android:layout_marginLeft="30dp"
-                                        android:layout_weight="1">
-
-                                        <de.hdodenhof.circleimageview.CircleImageView
-                                            android:id="@+id/img_off"
-                                            android:layout_width="15dp"
-                                            android:layout_height="15dp"
-                                            app:civ_border_width="10dp"
-                                            android:layout_marginTop="3dp"
-                                            android:src="@drawable/default_user"
-                                            app:civ_border_color="#03A9F4"/>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Water Bill"
-                                            android:fontFamily="@font/roboto_regular"
-                                            android:textSize="15dp"
-                                            android:textColor="@color/colorPrimaryDark"
-                                            android:layout_marginLeft="10dp"/>
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                                <include layout="@layout/item_divider" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal"
-                                        android:layout_weight="1">
-
-                                        <de.hdodenhof.circleimageview.CircleImageView
-                                            android:layout_width="15dp"
-                                            android:layout_height="15dp"
-                                            app:civ_border_width="10dp"
-                                            android:layout_marginTop="3dp"
-                                            android:src="@drawable/default_user"
-                                            app:civ_border_color="#4CAF50"/>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Telephone Bill"
-                                            android:fontFamily="@font/roboto_regular"
-                                            android:textSize="15dp"
-                                            android:textColor="@color/colorPrimaryDark"
-                                            android:layout_marginLeft="10dp"/>
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="horizontal"
-                                        android:layout_marginLeft="30dp"
-                                        android:layout_weight="1">
-
-                                        <de.hdodenhof.circleimageview.CircleImageView
-                                            android:layout_width="15dp"
-                                            android:layout_height="15dp"
-                                            app:civ_border_width="10dp"
-                                            android:layout_marginTop="3dp"
-                                            android:src="@drawable/default_user"
-                                            app:civ_border_color="#F44336"/>
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:text="Other"
-                                            android:fontFamily="@font/roboto_regular"
-                                            android:textSize="15dp"
-                                            android:textColor="@color/colorPrimaryDark"
-                                            android:layout_marginLeft="10dp"/>
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
 
 
                             </LinearLayout>
@@ -322,6 +161,7 @@
                                         android:fontFamily="@font/roboto_regular"
                                         android:text="Add Bill"
                                         android:clickable="true"
+                                        android:onClick="goToAddBill"
                                         android:textStyle="bold"
                                         android:layout_marginBottom="15dp"
                                         android:textColor="#404040"
@@ -330,6 +170,7 @@
                                     <ImageView
                                         android:layout_height="50dp"
                                         android:layout_width="50dp"
+                                        android:onClick="goToAddBill"
                                         android:clickable="true"
                                         android:src="@drawable/ic_file"/>
 
@@ -384,6 +225,8 @@
                                     <ImageView
                                         android:layout_height="50dp"
                                         android:layout_width="50dp"
+                                        android:clickable="true"
+                                        android:onClick="goToViewBill"
                                         android:src="@drawable/ic_monetization"/>
 
 
@@ -410,6 +253,7 @@
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="8dp"
                         android:layout_margin="10dp"
+                        android:clickable="true"
                         android:onClick="goToAddCategory"
                         android:layout_marginStart="10sp"
                         android:layout_marginEnd="10sp"
@@ -431,6 +275,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
+                                    android:clickable="true"
+                                    android:onClick="goToAddCategory"
                                     android:orientation="vertical">
 
                                     <TextView
@@ -485,6 +331,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
+                                    android:clickable="true"
+                                    android:onClick="goToReports"
                                     android:orientation="vertical">
 
                                     <TextView
